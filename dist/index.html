@@ -17,11 +17,20 @@
     <header class="header">
       <!-- First Flexbox Child - NAV BAR SECTION -->
       <nav class="nav">
-        <h1>clever techie</h1>
-        <h1>clever techie</h1>
-        <h1>clever techie</h1>
-        <h1>clever techie</h1>
-        <h1>clever techie</h1>
+        <!-- Nav Header -->
+        <div class="nav-header">
+          <h1>CT</h1>
+          <span class="nav-btn"><i class="far fa-hand-point-down"></i></span>
+        </div>
+        <!-- Nav Links -->
+        <ul class="nav-links">
+          <li><a href="#" class="nav-single-link">home</a></li>
+          <li><a href="#" class="nav-single-link">about</a></li>
+          <li><a href="#" class="nav-single-link">services</a></li>
+          <li><a href="#" class="nav-single-link">numbers</a></li>
+          <li><a href="#" class="nav-single-link">projects</a></li>
+          <li><a href="#" class="nav-single-link">contact</a></li>
+        </ul>
       </nav>
 
       <!-- Second Flexbox Child - BANNER SECTION -->
@@ -290,6 +299,54 @@
       </div>
     </section>
 
+    <!-- CONTACT SECTION -->
+    <section class="contact">
+      <!-- Section Title -->
+      <div class="section-title">
+        <h1 class="section-title-name">contact</h1>
+      </div>
+      <div class="contact-center">
+        <form>
+          <!-- Form Header -->
+          <div class="contact-header">
+            <input type="text" placeholder="Name" class="contact-name" />
+            <input type="email" placeholder="Email" class="contact-email" />
+          </div>
+
+          <!-- Form Text Area -->
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="How can I help you"
+            class="contact-textarea"
+          ></textarea>
+          <button type="submit" class="contact-btn">
+            <span class="contact-icon"><i class="fas fa-plane"></i></span> send
+            message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+      <div class="footer-icons">
+        <a href="#" class="footer-single-icon"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="#" class="footer-single-icon"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="#" class="footer-single-icon"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="#" class="footer-single-icon"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+    </footer>
     <script src="js/main.js"></script>
   </body>
 </html>

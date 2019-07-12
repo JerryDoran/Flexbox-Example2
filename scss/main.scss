@@ -7,7 +7,7 @@ $grey-color: #ebeff0;
 $orange-color: #fc5130;
 $section-color: #f2f2f2;
 $section-white: #fff;
-
+$dark-grey-color: #807d7d;
 // CORE STYLES *********************************************************
 * {
   margin: 0;
@@ -44,6 +44,64 @@ body {
   .nav {
     background: $light-color;
     color: $dark-color;
+    // border-bottom: 0.25rem solid $dark-color;
+
+    .nav-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.25rem 1rem;
+      border-bottom: 0.25rem solid $dark-color;
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+    }
+    .nav-btn {
+      font-size: 3rem;
+      align-self: center;
+      color: $dark-grey-color;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .nav-links {
+      list-style: none;
+      background: $dark-grey-color;
+
+      .nav-single-link {
+        display: block;
+        text-decoration: none;
+        color: $light-color;
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+        font-style: italic;
+        text-transform: capitalize;
+        transition: all 0.5s linear;
+
+        &:hover {
+          background: $light-color;
+          color: $orange-color;
+          padding-left: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .nav-links {
+    // Collapse the div
+    height: 0;
+
+    // This will hide the links
+    overflow: hidden;
+
+    transition: all 1s linear;
+  }
+
+  // This class will be added using javascript
+  .show-links {
+    height: 270px;
   }
 
   // BANNER
@@ -322,6 +380,92 @@ body {
   }
 }
 
+// CONTACT SECTION ******************************************************
+.contact {
+  background: $grey-color;
+  padding: 3rem 0;
+
+  .contact-center {
+    max-width: 80vw;
+
+    // center the div in the middle
+    margin: 2rem auto;
+
+    .contact-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+  }
+
+  .contact-name,
+  .contact-email,
+  .contact-textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid $dark-color;
+    padding: 0.25rem 0;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+  }
+
+  .contact-name,
+  .contact-email {
+    flex: 0 0 calc(50% - 1rem);
+  }
+
+  .contact-textarea {
+    font-family: inherit;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .contact-btn {
+    background: $dark-color;
+    color: $light-color;
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    transition: all 0.5s linear;
+
+    &:hover {
+      background: $light-color;
+      color: $dark-color;
+      border-color: $dark-color;
+    }
+
+    .contact-icon {
+      margin-right: 0.25rem;
+    }
+  }
+}
+
+// FOOTER SECTION ******************************************************
+.footer {
+  background: $dark-color;
+  padding: 3rem 0;
+
+  .footer-icons {
+    display: flex;
+    justify-content: space-around;
+
+    .footer-single-icon {
+      font-size: 2rem;
+      color: $light-color;
+      transition: all 1s ease;
+
+      &:hover {
+        color: $orange-color;
+      }
+    }
+  }
+}
+
 // MEDIA QUERIES
 @media (min-width: 992px) {
   .about-center {
@@ -403,6 +547,43 @@ body {
 
     .projects-single-project {
       flex: 0 0 calc(50% - 0.5rem);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 0.25rem solid $dark-color;
+
+    .nav-header {
+      border-bottom: none;
+    }
+    .nav-btn {
+      display: none;
+    }
+
+    .nav-links {
+      background: transparent;
+      height: auto;
+      flex: 1 0 auto;
+
+      // As a parent
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-self: center;
+
+      .nav-single-link {
+        background: transparent;
+        flex: 1 0 100px;
+
+        &:hover {
+          padding-left: 1rem;
+          color: $dark-color;
+        }
+      }
     }
   }
 }
